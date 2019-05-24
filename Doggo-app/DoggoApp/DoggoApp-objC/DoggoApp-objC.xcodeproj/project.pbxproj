@@ -16,6 +16,11 @@
 		166F8B282295E223002C7EE8 /* LECSubBreed.m in Sources */ = {isa = PBXBuildFile; fileRef = 166F8B272295E223002C7EE8 /* LECSubBreed.m */; };
 		166F8B2D2295E8C8002C7EE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 166F8B2C2295E8C8002C7EE8 /* LaunchScreen.storyboard */; };
 		166F8B302295EFC3002C7EE8 /* LECBreedNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 166F8B2F2295EFC3002C7EE8 /* LECBreedNetworking.m */; };
+		16D1C5E62297406B00370AE2 /* LECBreedListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D1C5E52297406B00370AE2 /* LECBreedListTableViewController.m */; };
+		16D1C5EA2297415300370AE2 /* LECSubBreedListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D1C5E92297415200370AE2 /* LECSubBreedListTableViewController.m */; };
+		16D1C5F0229741DE00370AE2 /* LECImagesCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D1C5EF229741DE00370AE2 /* LECImagesCollectionViewController.m */; };
+		16D1C5F32297420500370AE2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D1C5F22297420500370AE2 /* DetailViewController.swift */; };
+		16D1C5FA2297529700370AE2 /* LECImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 16D1C5F92297529700370AE2 /* LECImageCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +39,16 @@
 		166F8B2C2295E8C8002C7EE8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		166F8B2E2295EFC3002C7EE8 /* LECBreedNetworking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LECBreedNetworking.h; sourceTree = "<group>"; };
 		166F8B2F2295EFC3002C7EE8 /* LECBreedNetworking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LECBreedNetworking.m; sourceTree = "<group>"; };
+		16D1C5E42297406B00370AE2 /* LECBreedListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LECBreedListTableViewController.h; sourceTree = "<group>"; };
+		16D1C5E52297406B00370AE2 /* LECBreedListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LECBreedListTableViewController.m; sourceTree = "<group>"; };
+		16D1C5E82297415200370AE2 /* LECSubBreedListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LECSubBreedListTableViewController.h; sourceTree = "<group>"; };
+		16D1C5E92297415200370AE2 /* LECSubBreedListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LECSubBreedListTableViewController.m; sourceTree = "<group>"; };
+		16D1C5EE229741DE00370AE2 /* LECImagesCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LECImagesCollectionViewController.h; sourceTree = "<group>"; };
+		16D1C5EF229741DE00370AE2 /* LECImagesCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LECImagesCollectionViewController.m; sourceTree = "<group>"; };
+		16D1C5F12297420500370AE2 /* DoggoApp-objC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DoggoApp-objC-Bridging-Header.h"; sourceTree = "<group>"; };
+		16D1C5F22297420500370AE2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		16D1C5F82297529700370AE2 /* LECImageCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LECImageCollectionViewCell.h; sourceTree = "<group>"; };
+		16D1C5F92297529700370AE2 /* LECImageCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LECImageCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,9 +83,9 @@
 			isa = PBXGroup;
 			children = (
 				166F8B292295E22B002C7EE8 /* Model */,
+				166F8B312295EFCC002C7EE8 /* Networking */,
 				166F8B2A2295E234002C7EE8 /* View */,
-				166F8B312295EFCC002C7EE8 /* API Code */,
-				166F8B2B2295E23E002C7EE8 /* View Controllers */,
+				16D1C5E72297413500370AE2 /* View Controllers */,
 			);
 			path = "DoggoApp-objC";
 			sourceTree = "<group>";
@@ -102,26 +117,36 @@
 		166F8B2A2295E234002C7EE8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				166F8B122295E1C5002C7EE8 /* Main.storyboard */,
 				166F8B2C2295E8C8002C7EE8 /* LaunchScreen.storyboard */,
+				166F8B122295E1C5002C7EE8 /* Main.storyboard */,
+				16D1C5F82297529700370AE2 /* LECImageCollectionViewCell.h */,
+				16D1C5F92297529700370AE2 /* LECImageCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		166F8B2B2295E23E002C7EE8 /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "View Controllers";
-			sourceTree = "<group>";
-		};
-		166F8B312295EFCC002C7EE8 /* API Code */ = {
+		166F8B312295EFCC002C7EE8 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				166F8B2E2295EFC3002C7EE8 /* LECBreedNetworking.h */,
 				166F8B2F2295EFC3002C7EE8 /* LECBreedNetworking.m */,
 			);
-			path = "API Code";
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		16D1C5E72297413500370AE2 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				16D1C5E42297406B00370AE2 /* LECBreedListTableViewController.h */,
+				16D1C5E52297406B00370AE2 /* LECBreedListTableViewController.m */,
+				16D1C5E82297415200370AE2 /* LECSubBreedListTableViewController.h */,
+				16D1C5E92297415200370AE2 /* LECSubBreedListTableViewController.m */,
+				16D1C5EE229741DE00370AE2 /* LECImagesCollectionViewController.h */,
+				16D1C5EF229741DE00370AE2 /* LECImagesCollectionViewController.m */,
+				16D1C5F22297420500370AE2 /* DetailViewController.swift */,
+				16D1C5F12297420500370AE2 /* DoggoApp-objC-Bridging-Header.h */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +181,7 @@
 				TargetAttributes = {
 					166F8B082295E1C5002C7EE8 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -196,9 +222,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16D1C5F32297420500370AE2 /* DetailViewController.swift in Sources */,
+				16D1C5EA2297415300370AE2 /* LECSubBreedListTableViewController.m in Sources */,
 				166F8B302295EFC3002C7EE8 /* LECBreedNetworking.m in Sources */,
+				16D1C5E62297406B00370AE2 /* LECBreedListTableViewController.m in Sources */,
+				16D1C5F0229741DE00370AE2 /* LECImagesCollectionViewController.m in Sources */,
 				166F8B1C2295E1C5002C7EE8 /* main.m in Sources */,
 				166F8B0E2295E1C5002C7EE8 /* AppDelegate.m in Sources */,
+				16D1C5FA2297529700370AE2 /* LECImageCollectionViewCell.m in Sources */,
 				166F8B252295E203002C7EE8 /* LECBreed.m in Sources */,
 				166F8B282295E223002C7EE8 /* LECSubBreed.m in Sources */,
 			);
@@ -342,6 +373,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -350,6 +382,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Leah-Cluff.DoggoApp-objC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DoggoApp-objC/View Controllers/DoggoApp-objC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -358,6 +393,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -366,6 +402,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Leah-Cluff.DoggoApp-objC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DoggoApp-objC/View Controllers/DoggoApp-objC-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -13,13 +13,13 @@
         <!--All Good Doggos-->
         <scene sceneID="8AQ-vB-LM2">
             <objects>
-                <tableViewController id="0Ge-jl-WYo" sceneMemberID="viewController">
+                <tableViewController id="0Ge-jl-WYo" customClass="LECBreedListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Kef-Qp-uPw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.93428288110000002" blue="0.88840929260000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="EKz-mT-jp8">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="breedCell" id="EKz-mT-jp8">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EKz-mT-jp8" id="mrY-In-06T">
@@ -27,7 +27,8 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="zT2-Dp-UDG" kind="show" id="AWw-TL-QOr"/>
+                                    <segue destination="zT2-Dp-UDG" kind="show" identifier="toSubBreedVC" id="AWw-TL-QOr"/>
+                                    <segue destination="TS4-WZ-aWD" kind="show" identifier="toCollectionVC" trigger="accessoryAction" id="JdC-vS-bhC"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -42,16 +43,16 @@
             </objects>
             <point key="canvasLocation" x="296" y="150"/>
         </scene>
-        <!--Table View Controller-->
+        <!--SubBreeds-->
         <scene sceneID="4Qr-D8-vKL">
             <objects>
-                <tableViewController id="zT2-Dp-UDG" sceneMemberID="viewController">
+                <tableViewController id="zT2-Dp-UDG" customClass="LECSubBreedListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="NZT-CI-uDA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.93428288110000002" blue="0.88840929260000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="fnB-Y6-Pdn">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="subBreedCell" id="fnB-Y6-Pdn">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fnB-Y6-Pdn" id="1vA-V6-zuI">
@@ -59,7 +60,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="TS4-WZ-aWD" kind="show" id="a8t-Tr-jt1"/>
+                                    <segue destination="TS4-WZ-aWD" kind="show" identifier="fromSubBreedsToImages" id="a8t-Tr-jt1"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -68,15 +69,16 @@
                             <outlet property="delegate" destination="zT2-Dp-UDG" id="r56-zZ-cQ4"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="SubBreeds" id="FIS-FR-4t1"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Jh-Hc-Zy5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1433" y="150"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Images-->
         <scene sceneID="Ahe-JO-zss">
             <objects>
-                <collectionViewController id="TS4-WZ-aWD" sceneMemberID="viewController">
+                <collectionViewController id="TS4-WZ-aWD" customClass="LECImagesCollectionViewController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="n20-Q0-vp2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,7 +109,7 @@
                                     <constraint firstItem="a3A-p4-VdR" firstAttribute="leading" secondItem="HL6-fR-n1j" secondAttribute="leading" id="Xrg-zm-ZMt"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="Qqb-rO-Qjy" kind="show" id="2uI-JK-s2H"/>
+                                    <segue destination="Qqb-rO-Qjy" kind="show" identifier="toDetailVC" id="2uI-JK-s2H"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -116,15 +118,16 @@
                             <outlet property="delegate" destination="TS4-WZ-aWD" id="1AY-KP-xP8"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" title="Images" id="AcN-QA-wpe"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jac-Dg-wiz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="972" y="873"/>
         </scene>
-        <!--View Controller-->
+        <!--Close up picture-->
         <scene sceneID="yM6-lE-EZP">
             <objects>
-                <viewController id="Qqb-rO-Qjy" sceneMemberID="viewController">
+                <viewController id="Qqb-rO-Qjy" customClass="DetailViewController" customModule="DoggoApp_objC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YiI-Ed-ddg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,6 +159,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cLX-Ie-jAF"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Close up picture" id="fiv-FS-E8t"/>
+                    <connections>
+                        <outlet property="dogImageView" destination="IYz-T4-9Th" id="Brb-nx-Gdy"/>
+                        <outlet property="dogNameLabel" destination="f0i-Ry-eDX" id="P6U-tO-UFM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pYj-6g-O2f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -183,4 +191,7 @@
     <resources>
         <image name="2nd loading screen" width="118" height="102"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="a8t-Tr-jt1"/>
+    </inferredMetricsTieBreakers>
 </document>

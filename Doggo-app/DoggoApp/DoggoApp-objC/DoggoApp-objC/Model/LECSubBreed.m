@@ -10,12 +10,13 @@
 
 @implementation LECSubBreed
 
--(instancetype)initWithName:(NSString *)name imageUrls:(NSArray *)imageUrls
+-(instancetype)initWithName:(NSString *)name imageUrls:(NSArray *)imageUrls;
 {
     self = [super init];
     if (self) {
         _name = name;
         _imageUrls = imageUrls;
+       
     }
     return self;
 }
